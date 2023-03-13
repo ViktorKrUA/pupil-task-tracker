@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{#{% block title %} Blog Author {% endblock %} #}
+{##}
+{#{% block body_class %} blog-author {% endblock %}#}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  {% include 'includes/navigation-transparent.html' %}
+
+  <header>
+    <div class="page-header min-height-400" style="background-image: url('https://cdn.vectorstock.com/i/1000x1000/04/25/cartoon-students-vector-25730425.webp');" loading="lazy">
+      <span class="mask bg-gradient-dark opacity-8"></span>
+    </div>
+  </header>
+
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 mb-4">
+    <!-- START Testimonials w/ user image & text & info -->
+
+    <section class="py-sm-7 py-2 position-relative">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mx-auto">
+            <div class="mt-n8 mt-md-n9 text-center">
+              <img class="avatar avatar-xxl shadow-xl position-relative z-index-2"
+                   src="http://clipart-library.com/image_gallery/n1806251.gif" alt="bruce" loading="lazy">
+            </div>
+            <div class="float-lg-end">
+              <div class="mx-1">
+                <form id="form1" action="" method="get" class="form-outline justify-content-end">
+                {{ search_form|crispy }}
+              </form>
+              <button class="btn btn-primary float-lg-start" type="submit" form="form1">🔎</button>
+            </div>
+                  <a href="{% url 'task_tracker:pupil-create' %}" class="btn btn-info">Add new pupil</a>
+            </div>
+            {% if pupil_list %}
+            {% for pupil in pupil_list %}
+            <div class="row py-2">
+                  <a href="{% url "task_tracker:pupil-detail" pk=pupil.id %} " class="text-black-50" target="blank">
+                    info of: <strong>{{ pupil.username }}</strong>
+                  </a>
+                  <h3 class="mb-0">{{ pupil.first_name }} {{ pupil.last_name }}</h3>
+                  <h6><i>Educational stage: {{ pupil.educational_stage}}</i></h6>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-auto">
+                    <a href="{% url 'task_tracker:pupil-update' pk=pupil.id %}" class="btn btn-light">Update</a>
+                  </div>
+                  <div class="col-auto">
+                    <a href="{% url 'task_tracker:pupil-delete' pk=pupil.id %}" class="btn btn-danger">Delete</a>
+                  </div>
+                </div>
+              {% endfor %}
+              {% endif %}
+          </div>
+        </div>
+        <div class="justify-content-center">
+          {% include "includes/pagination.html" %}
+        </div>
+      </div>
+    </section>
+    <!-- END Blogs w/ 4 cards w/ image & text & link -->
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
