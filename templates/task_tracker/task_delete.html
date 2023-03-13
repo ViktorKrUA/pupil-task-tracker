@@ -35,8 +35,11 @@
                   <form action="" method="post">
                     <h4><i>You won't be able to undo this action...
                     {% csrf_token %}
-                    <input type="submit" value="Yes" class="btn btn-danger float-end w-30">
                     </i></h4>
+                  <div>
+                    <a href="{% url 'task_tracker:task-list' %}" class="btn btn-dark float-end w-20">Back 🔙</a>
+                    <input type="submit" value="Yes" class="btn btn-danger float-end w-30">
+                  </div>
                     </form>
                 </div>
               </div>

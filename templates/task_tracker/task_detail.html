@@ -27,8 +27,23 @@
   <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
     <!-- Section with four info areas left & one card right with image and waves -->
     <section class="py-7">
+       <a href="{% url 'task_tracker:task-list' %}" class="btn btn-dark float-end w-20">Back 🔙</a>
       <div class="container text-black-100">
         <i>Task deadline: {{ task.deadline }} - Task priority: {{ task.priority }}</i>
+          <p>
+            <strong>Completed:</strong>
+            {{ task.is_completed }}
+            {% if not task.is_completed %}
+              <form action="{% url "task_tracker:update-completion" pk=task.id %}" method="post" target="blank">
+                {% csrf_token %}
+                <input type="submit" value="Mark as completed" class="btn btn-info">
+              </form>
+            {% else %}
+              <form action="{% url "task_tracker:update-completion" pk=task.id %}" method="post" target="blank">
+                {% csrf_token %}
+                <input type="submit" value="Undo completion" class="btn btn-secondary">
+              </form>
+            {% endif %}
         <br>
           <strong><i>{{ task.task_type }}</i></strong>
         <hr>

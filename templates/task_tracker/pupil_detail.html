@@ -27,6 +27,7 @@
   <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
     <!-- Section with four info areas left & one card right with image and waves -->
     <section class="py-7">
+    <a href="{% url 'task_tracker:pupil-list' %}" class="btn btn-dark float-end w-20">Back 🔙</a>
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
@@ -41,7 +42,7 @@
                       <hr>
                       <ul>
                         <li>
-                          {{ task.name }} - <i>{{ task.task_type.name }}</i>
+                          {{ task.name }} |<i>{{ task.task_type.name }}</i> | <strong>Task completed: {{ task.is_completed }}</strong>
                         </li>
                       </ul>
                     {% empty %}

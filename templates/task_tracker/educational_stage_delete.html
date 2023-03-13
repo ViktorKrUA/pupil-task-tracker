@@ -2,7 +2,7 @@
 
 {% block title %} DELETE {% endblock %}
 
-{#{% block body_class %} blog-author {% endblock %}#}
+{% block body_class %} stage-delete {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -26,7 +26,7 @@
             <div class="mt-n8 mt-md-n9 text-center">
                <img src="https://cdn-icons-png.flaticon.com/512/9344/9344895.png" alt="trash can" height="200" width="200"/>
             </div>
-            <div class="row py-5">
+             <div class="row py-5">
               <div class="col-lg-7 col-md-7 z-index-2 position-relative px-md-2 px-sm-5 mx-auto">
                 <div class="d-flex justify-content-between align-items-center mb-2">
                   <h3 class="text-center">Are you sure you want to delete "{{ educationalstage.name }}" stage?</h3>
@@ -35,7 +35,10 @@
                   <form action="" method="post">
                     <h4><i>You won't be able to undo this action...
                     {% csrf_token %}
+                 <div>
+                    <a href="{% url 'task_tracker:educational-stage-list' %}" class="btn btn-dark float-end w-20">Back 🔙</a>
                     <input type="submit" value="Yes" class="btn btn-danger float-end w-30">
+                  </div>
                     </i></h4>
                     </form>
                 </div>

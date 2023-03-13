@@ -3,9 +3,10 @@ from typing import Optional, Any
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import QuerySet
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views import generic
+from django.views import generic, View
 
 from .forms import PupilSearchForm, PupilCreationForm, TaskSearchForm
 from .models import TaskType, Task, EducationalStage, Pupil
@@ -124,6 +125,26 @@ class TaskListView(LoginRequiredMixin, generic.ListView):
 class TaskDetailView(LoginRequiredMixin, generic.DetailView):
     model = Task
     template_name = "task_tracker/task_detail.html"
+
+
+class TaskUpdateCompletionView(LoginRequiredMixin, View):
+    def get(self, request, pk) -> HttpResponse:
+        task = Task.objects.get(id=pk)
+        task.is_completed = not task.is_completed
+        task.save()
+        context = {
+            "task": task
+        }
+        return render(request, "task_tracker/task_detail.html", context=context)
+
+    def post(self, request, pk) -> HttpResponse:
+        task = Task.objects.get(id=pk)
+        task.is_completed = request.POST.get("is_completed", not task.is_completed)
+        task.save()
+        context = {
+            "task": task
+        }
+        return render(request, "task_tracker/task_detail.html", context=context)
 
 
 class TaskCreateView(LoginRequiredMixin, generic.CreateView):

@@ -24,8 +24,8 @@ class PupilAdmin(UserAdmin):
                         "last_name",
                         "educational_stage",
                     )
-                }
-            )
+                },
+            ),
         )
     )
 

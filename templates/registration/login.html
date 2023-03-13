@@ -1,4 +1,5 @@
 {% extends "base-fullscreen.html" %}
+{% load crispy_forms_filters %}
 
 {% block title %} Sign IN {% endblock %}
 
@@ -34,19 +35,36 @@
               </div>
             </div>
             <div class="card-body">
-              <form role="form" method="post" action="" class="text-start">
+{#              <form role="form" method="post" action="" class="text-start">#}
+{##}
+{#                  {% csrf_token %}#}
+{##}
+{#                <div class="input-group input-group-outline mb-3">#}
+{#                  {{ form.username }}#}
+{#                </div>#}
+{#                <div class="input-group input-group-outline mb-3">#}
+{#                  {{ form.password }}#}
+{#                </div>#}
+{#                <div class="text-center">#}
+{#                  <button type="submit" name="login"#}
+{#                          class="btn bg-gradient-primary w-100 my-4 mb-2">Sign in</button>#}
 
-                  {% csrf_token %}
+              {% if form.errors %}
+  <p>Your username and password didn't match. Please try again.</p>
+{% endif %}
 
-                <div  class="input-group input-group-outline mb-3">
-                  {{ form.username }}
-                </div>
-                <div class="input-group input-group-outline mb-3">
-                  {{ form.password }}
-                </div>
-                <div class="text-center">
-                  <button type="submit" name="login"
-                          class="btn bg-gradient-primary w-100 my-4 mb-2">Sign in</button>
+
+{% if next %}
+  <p>Please login to see this page.</p>
+{% endif %}
+
+<form method="post" action="{% url 'login' %}">
+  {% csrf_token %}
+  {{ form|crispy }}
+
+  <input type="submit" value="Login" class="btn btn-primary" />
+  <input type="hidden" name="next" value="{{ next }}" />
+</form>
                 </div>
               </form>
             </div>

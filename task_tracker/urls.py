@@ -9,6 +9,7 @@ from .views import (
     PupilDeleteView,
     TaskListView,
     TaskDetailView,
+    TaskUpdateCompletionView,
     TaskCreateView,
     TaskUpdateView,
     TaskDeleteView,
@@ -41,6 +42,11 @@ urlpatterns = [
     ),
     path("tasks/", TaskListView.as_view(), name="task-list"),
     path("tasks/<int:pk>/", TaskDetailView.as_view(), name="task-detail"),
+    path(
+        "tasks/<int:pk>/complete/",
+        TaskUpdateCompletionView.as_view(),
+        name='update-completion'
+    ),
     path("tasks/create/", TaskCreateView.as_view(), name="task-create"),
     path(
         "tasks/<int:pk>/update/",
