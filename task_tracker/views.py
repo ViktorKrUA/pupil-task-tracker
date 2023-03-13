@@ -124,7 +124,6 @@ class TaskListView(LoginRequiredMixin, generic.ListView):
 class TaskDetailView(LoginRequiredMixin, generic.DetailView):
     model = Task
     template_name = "task_tracker/task_detail.html"
-    # queryset = Task.objects.get()
 
 
 class TaskCreateView(LoginRequiredMixin, generic.CreateView):
@@ -156,7 +155,6 @@ class TaskTypeListView(LoginRequiredMixin, generic.ListView):
 
 class TaskTypeDetailView(LoginRequiredMixin, generic.DetailView):
     model = TaskType
-    # queryset = Task.objects.get()
 
 
 class TaskTypeCreateView(LoginRequiredMixin, generic.CreateView):
