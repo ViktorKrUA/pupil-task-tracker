@@ -3,17 +3,18 @@
 A task tracker is an intelligent version of a to-do list that can help manage tasks and assignments.
 
 I've implemented the basic task tracker for pupils of different educational stages and a teacher to follow their daily
-activities, assigning new tasks and checking performance. 
+activities, assigning new tasks and checking completion. 
 
 As for the tutor it would be a nice possibility to track the performance of each individually and by stages.
 
-To put it simply, task trackers help pupils and teachers keep track of what tasks are complete and what is still waiting.
+To put it simply, task trackers help pupils and teachers keep track of what tasks are completed and what is still waiting.
 
 
 ![Screenshot_1.png](static/assets/img/Screenshot_1.png)
 
 ## Check it out
-link
+
+
 
 ## Installation
 
@@ -36,6 +37,8 @@ python manage.py runserver # starts Django Server
 - Authentication for pupil/teacher
 - Managing pupils, educational stages, task types and tasks directly from the website interface
 - Powerful admin panel for advanced managing
+
+
 ## Demo
 
 Use the following command to load prepared data from fixture to get demo access to the system:
@@ -51,4 +54,4 @@ After cloning, you need to create your .env file and register your variables in 
 
 ## Screenshots
 
-![Screenshot_2.png](static/assets/img/Screenshot_2.png)
+![Screenshot_2.png](static/assets/img/Clipboard02.jpg)
