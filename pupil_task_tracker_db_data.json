@@ -1,0 +1,271 @@
+[
+{
+  "model": "task_tracker.tasktype",
+  "pk": 1,
+  "fields": {
+    "name": "Grammar"
+  }
+},
+{
+  "model": "task_tracker.tasktype",
+  "pk": 3,
+  "fields": {
+    "name": "Vocabulary"
+  }
+},
+{
+  "model": "task_tracker.tasktype",
+  "pk": 4,
+  "fields": {
+    "name": "Reading"
+  }
+},
+{
+  "model": "task_tracker.tasktype",
+  "pk": 5,
+  "fields": {
+    "name": "Writing"
+  }
+},
+{
+  "model": "task_tracker.tasktype",
+  "pk": 6,
+  "fields": {
+    "name": "Listening"
+  }
+},
+{
+  "model": "task_tracker.educationalstage",
+  "pk": 1,
+  "fields": {
+    "name": "Preschool"
+  }
+},
+{
+  "model": "task_tracker.educationalstage",
+  "pk": 2,
+  "fields": {
+    "name": "Teacher"
+  }
+},
+{
+  "model": "task_tracker.educationalstage",
+  "pk": 3,
+  "fields": {
+    "name": "Middle School"
+  }
+},
+{
+  "model": "task_tracker.educationalstage",
+  "pk": 4,
+  "fields": {
+    "name": "Elementary School"
+  }
+},
+{
+  "model": "task_tracker.educationalstage",
+  "pk": 5,
+  "fields": {
+    "name": "High School"
+  }
+},
+{
+  "model": "task_tracker.educationalstage",
+  "pk": 6,
+  "fields": {
+    "name": "Higher Education"
+  }
+},
+{
+  "model": "task_tracker.pupil",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$2brYOMjcfxXgcYIqpCDxVc$gg5mb/PIFG/CQeyIhNe65sTT0dD0fWVm7Wnd9uxCRNE=",
+    "last_login": "2023-03-14T17:23:30.819Z",
+    "is_superuser": true,
+    "username": "admin.user",
+    "first_name": "Admin",
+    "last_name": "Admin",
+    "email": "user@admin.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-03-09T13:36:59Z",
+    "educational_stage": 2,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "task_tracker.pupil",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$FSCckqPYUPVSAJL35Y3528$yC6O9QxHb0LunDgN6bj5B7iItD2mUtrzeAffXPeGSBk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ChristopherColumbus",
+    "first_name": "Christopher",
+    "last_name": "Columbus",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-03-11T17:43:29.902Z",
+    "educational_stage": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "task_tracker.pupil",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$iFPA69l8oel8LeuwFHwC18$s/twCJEdpT0l89JN3JBCjDeQ7wW9KHCt0T2Fp79eqZQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "IsaacNewton",
+    "first_name": "Isaac",
+    "last_name": "Newton",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-03-11T17:45:43.401Z",
+    "educational_stage": 3,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "task_tracker.pupil",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$Kr4jsIUPsH4QpYIz6xUKQN$Mmu5M8xv/lP4h5RMGUOVH6dog4z8OUnmv8j9m+11qTc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Amadeus",
+    "first_name": "Wolfgang",
+    "last_name": "Mozart",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-03-11T19:39:16.978Z",
+    "educational_stage": 4,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "task_tracker.pupil",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$k3fuubWsV4rYvWHgxB1ppc$1s1SKmOXC1V5WlBoPuReammvjoDPv4DgVX+XJoUUXmI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Monoliz",
+    "first_name": "Leonardo",
+    "last_name": "da Vinci",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-03-12T17:20:45.739Z",
+    "educational_stage": 6,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "task_tracker.pupil",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$ySOzVOIpjuBSjw2xsLFN8N$zwZGVLGkQrgP7hGvrjUMx2X7zx8JAMY5wTbuiqe28CQ=",
+    "last_login": "2023-03-14T17:42:57.698Z",
+    "is_superuser": false,
+    "username": "Test",
+    "first_name": "Test",
+    "last_name": "Test",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-03-13T19:31:22.813Z",
+    "educational_stage": 6,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "task_tracker.task",
+  "pk": 1,
+  "fields": {
+    "name": "learn 5 new words",
+    "description": "1. Absence – The lack or unavailability of something or someone.\r\n\r\n2. Approval – Having a positive opinion of something or someone.\r\n\r\n3. Answer – The response or receipt to a phone call, question, or letter.\r\n\r\n4. Attention – Noticing or recognizing something of interest.\r\n\r\n5. Amount – A mass or a collection of something",
+    "deadline": "2023-04-01T12:00:00Z",
+    "is_completed": false,
+    "priority": "MEDIUM",
+    "task_type": 3,
+    "assignees": [
+      1,
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "task_tracker.task",
+  "pk": 2,
+  "fields": {
+    "name": "phrasal verbs",
+    "description": "What is a phrasal verb? \r\nA phrasal verb combines a normal verb with an adverb or a preposition to create an entirely new verbal phrase—the phrasal verb. The meaning of a phrasal verb is usually unrelated to the meanings of the words that comprise it, so think of a phrasal verb as an entirely new and independent word. \r\n\r\nback [x] up - support or defend someone\r\n(When the class was making fun of me, only the teacher backed me up.)\r\n\r\nbreak down - stop working, especially when referring to machines\r\n(The ice creammachine at McDonald’s is always breaking down. )\r\n\r\ncall around - contact multiple people\r\n(Roy called around to find a nearby mechanic.)\r\n\r\ncalm down - relax after an energetic or irritated state\r\n(I need a few minutes to calm down after that match.)",
+    "deadline": "2023-03-19T23:00:00Z",
+    "is_completed": false,
+    "priority": "HIGH",
+    "task_type": 1,
+    "assignees": [
+      3,
+      5
+    ]
+  }
+},
+{
+  "model": "task_tracker.task",
+  "pk": 3,
+  "fields": {
+    "name": "Discover Britain through literature",
+    "description": "In reality you're sitting in an armchair but in your mind you're in the depths of a faraway forbidden forest or perhaps in a cute little café in a side street withthe Eiffel Tower on the distant skyline. Literature gives you the safety of travelling within the comforts of your own home, with a cup of tea in your hand and a cat sitting on your lap. I would like to take you on a journey through Great Britain. You can stay exactly where you are: no passport needed, no flight necessary, just an eagerness to explore. Through thesenovels you will be able to transport yourself and discover the beauty and the culture of Great Britain.",
+    "deadline": "2023-04-20T09:00:00Z",
+    "is_completed": false,
+    "priority": "LOW",
+    "task_type": 4,
+    "assignees": [
+      5
+    ]
+  }
+},
+{
+  "model": "task_tracker.task",
+  "pk": 4,
+  "fields": {
+    "name": "“The Cat in the Hat” by Dr. Seuss",
+    "description": "“The Cat in the Hat” is the longest of the children’s books on this list, but it is one of the best ones. \r\nThe Cat in the Hat character is one of Dr. Seuss’s most popular stories. This book is excellent for English learners because of the simple language and diverse vocabulary. I recommend this book for people who want a larger knowledge of English vocabulary in particular. For example, a couple of fun words used in this story include “thump” and “bump.”",
+    "deadline": "2023-02-28T23:00:00Z",
+    "is_completed": true,
+    "priority": "HIGH",
+    "task_type": 4,
+    "assignees": [
+      3
+    ]
+  }
+},
+{
+  "model": "task_tracker.task",
+  "pk": 5,
+  "fields": {
+    "name": "To write a blog",
+    "description": "Write your blog below about a trip you went on. Think about these questions: Where did you go? \r\nWho did you go with? What did you do there? What did you enjoy? What didn’t you enjoy? Do you want to go back?",
+    "deadline": "2023-04-20T09:00:00Z",
+    "is_completed": false,
+    "priority": "URGENT",
+    "task_type": 5,
+    "assignees": [
+      6
+    ]
+  }
+}
+]

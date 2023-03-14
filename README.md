@@ -1,4 +1,3 @@
-
 # Pupils' task tracker
 
 A task tracker is an intelligent version of a to-do list that can help manage tasks and assignments.
@@ -41,16 +40,15 @@ python manage.py runserver # starts Django Server
 
 Use the following command to load prepared data from fixture to get demo access to the system:
 
-python manage.py loaddata pupils_task_tracker_db_data.json.
+python manage.py loaddata pupil_task_tracker_db_data.json
 
 After loading data from fixture you can use following superuser (or create another one by yourself):
 
-Login: admin
-Password: 
+Login: Test
+Password: higher123
 
 After cloning, you need to create your .env file and register your variables in it. After that, everything will work. For an example, see the file .env.sample
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
+![Screenshot_2.png](..%2F..%2F..%2F..%2F..%2F..%2FPictures%2FDjango%20Taxi%2FProject%2FScreenshot_2.png)
