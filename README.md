@@ -10,7 +10,7 @@ As for the tutor it would be a nice possibility to track the performance of each
 To put it simply, task trackers help pupils and teachers keep track of what tasks are complete and what is still waiting.
 
 
-![Screenshot_1.png](..%2F..%2F..%2F..%2F..%2F..%2FPictures%2FDjango%20Taxi%2FProject%2FScreenshot_1.png)
+![Screenshot_1.png](static/assets/img/Screenshot_1.png)
 
 ## Check it out
 link
@@ -51,4 +51,4 @@ After cloning, you need to create your .env file and register your variables in 
 
 ## Screenshots
 
-![Screenshot_2.png](..%2F..%2F..%2F..%2F..%2F..%2FPictures%2FDjango%20Taxi%2FProject%2FScreenshot_2.png)
+![Screenshot_2.png](static/assets/img/Screenshot_2.png)
