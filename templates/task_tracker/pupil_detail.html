@@ -30,26 +30,28 @@
     <a href="{% url 'task_tracker:pupil-list' %}" class="btn btn-dark float-end w-20">Back 🔙</a>
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6">
+          <div class="col-lg-9">
             <div class="row justify-content-start">
                 <div class="info">
                   <h5>{{ pupil.first_name }} {{ pupil.last_name }}</h5>
                   <p>{{ pupil.educational_stage }}</p>
-
                     <div class="ml-3">
                     <h5 class="text-decoration-underline">Tasks</h5>
                     {% for task in pupil.tasks.all %}
-                      <hr>
                       <ul>
                         <li>
-                          {{ task.name }} |<i>{{ task.task_type.name }}</i> | <strong>Task completed: {{ task.is_completed }}</strong>
+                          <p><strong>
+                            <a href="{% url 'task_tracker:task-detail' pk=task.id %}">{{ task.name }}</a>
+                          </strong> - <i>{{ task.task_type.name }}</i></p>
+                          <p><strong>Task completed:</strong> {{ task.is_completed }} - {{ task.deadline }}
+                          </p>
                         </li>
+                        <hr>
                       </ul>
                     {% empty %}
-                      <p>No students yet!</p>
+                      <p>No tasks yet!</p>
                     {% endfor %}
                   </div>
-
                 </div>
             </div>
           </div>
