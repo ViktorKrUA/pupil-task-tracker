@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %} Educational stages {% endblock %}
+
+{% block body_class %} educational-stages {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  {% include 'includes/navigation-light.html' %}
+
+  <section>
+    <div class="page-header min-vh-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 start-0 text-center justify-content-center flex-column">
+            <div class="position-relative h-100 m-5 px-7 border-radius-lg d-flex flex-column justify-content-center"
+                 style="background-image: url('https://cdn-icons-png.flaticon.com/512/762/762686.png'); width: 100%; height: 100%;" loading="lazy"></div>
+          </div>
+          <div class="col-xl-5 col-lg-6 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5">
+            <div class="card d-flex blur justify-content-center shadow-lg my-sm-0 my-sm-6 mt-8 mb-5">
+              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                <div class="bg-gradient-primary shadow-primary border-radius-lg p-3">
+                  <h3 class="text-white text-primary mb-0">Educational Stage
+                    <div class="float-lg-end">
+                          <a href="{% url 'task_tracker:educational-stage-create' %}" class="btn btn-info">Add new Stage</a>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+                {% if educational_stage_list %}
+                {% for stage in educational_stage_list %}
+                  <div class="card-body">
+                  <p class="text-bold pb-3">{{ stage.name }}</p>
+
+                  <div class="col-md-6">
+                    <a href="{% url 'task_tracker:educational-stage-update' pk=stage.id %}" class="btn btn-secondary justify-content-end" target="blank">Update</a>
+                    <a href="{% url 'task_tracker:educational-stage-delete' pk=stage.id %}" class="btn btn-danger justify-content-end" target="blank">Delete</a>
+                   </div>
+                  </div>
+                {% endfor %}
+              {% endif %}
+              <div class="card-body">
+                <div class="justify-content-center">
+                  {% include "includes/pagination.html" %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
