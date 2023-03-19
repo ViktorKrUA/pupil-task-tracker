@@ -33,6 +33,7 @@ ASSETS_ROOT = "/static/assets"
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
+    "pupils-task-tracker.onrender.com",
 ]
 
 INTERNAL_IPS = [
