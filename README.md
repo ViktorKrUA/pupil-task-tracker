@@ -41,13 +41,8 @@ python manage.py runserver # starts Django Server
 
 ## Demo
 
-Use the following command to load prepared data from fixture to get demo access to the system:
-
-python manage.py loaddata pupil_task_tracker_db_data.json
-
-After loading data from fixture you can use following superuser (or create another one by yourself):
-
 Login: Test
+
 Password: higher123
 
 After cloning, you need to create your .env file and register your variables in it. After that, everything will work. For an example, see the file .env.sample
