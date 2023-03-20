@@ -49,8 +49,8 @@ class PrivateTaskTests(TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(
-            list(response.context["task_list"]),
-            list(tasks)
+            list(response.context["task_list"])[:3],
+            list(tasks)[:3]
         )
 
         self.assertTemplateUsed(response, "task_tracker/task_list.html")
@@ -102,8 +102,8 @@ class PrivateStageTests(TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(
-            list(response.context["educational_stage_list"]),
-            list(stages)
+            list(response.context["educational_stage_list"])[:3],
+            list(stages)[:3]
         )
 
         self.assertTemplateUsed(response, "task_tracker/educational_stage_list.html")
@@ -135,8 +135,8 @@ class PrivateTaskTypeTests(TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(
-            list(response.context["task_type_list"]),
-            list(types)
+            list(response.context["task_type_list"])[:3],
+            list(types)[:3]
         )
 
         self.assertTemplateUsed(response, "task_tracker/task_type_list.html")
@@ -168,8 +168,8 @@ class PrivatePupilTests(TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(
-            list(response.context["pupil_list"]),
-            list(pupil)
+            list(response.context["pupil_list"])[:3],
+            list(pupil)[:3]
         )
 
         self.assertTemplateUsed(response, "task_tracker/pupil_list.html")

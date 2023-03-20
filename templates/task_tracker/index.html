@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="{{ ASSETS_ROOT }}/img/apple-icon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ ASSETS_ROOT }}/img/books.png">
   <link rel="icon" type="image/png" href="{{ ASSETS_ROOT }}/img/books.png">
 
   <title>
@@ -49,7 +49,9 @@
               <div class="col-md-4 position-relative">
                 <div class="p-3 text-center">
                   <h1 class="text-gradient text-primary"><span id="state1" countTo="{{ num_task_types }}">0</span>+</h1>
-                  <h5 class="mt-3">Task Types </h5>
+                  <h5 class="mt-3">
+                    <a href="{% url "task_tracker:task-type-list" %}">Task Types </a>
+                        </h5>
                   {% if task_types %}
                     {% for type in task_types %}
                       | {{ type.name }} |
@@ -61,7 +63,9 @@
               <div class="col-md-4 position-relative">
                 <div class="p-3 text-center">
                   <h1 class="text-gradient text-primary"> <span id="state2" countTo="{{ num_educational_stages }}">0</span>+</h1>
-                  <h5 class="mt-3">Educational Stages </h5>
+                  <h5 class="mt-3">
+                    <a href="{% url "task_tracker:educational-stage-list" %}">Educational Stages</a>
+                    </h5>
                   {% if task_types %}
                     {% for stage in stages %}
                       | {{ stage.name }} |
@@ -73,7 +77,9 @@
               <div class="col-md-4">
                 <div class="p-3 text-center">
                   <h1 class="text-gradient text-primary" id="state3" countTo="{{ num_tasks }}">0</h1>
-                  <h5 class="mt-3">Tasks</h5>
+                  <h5 class="mt-3">
+                    <a href="{% url "task_tracker:task-list" %}">Tasks</a>
+                  </h5>
                   <p class="text-sm font-weight-normal">The tasks are added and checked every day to assess the pupils' results</p>
                 </div>
               </div>
